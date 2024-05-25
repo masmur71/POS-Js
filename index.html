@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Point of Sale App</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 25px;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h3,
+      p {
+        text-align: center;
+        padding: 5px;
+        margin-top: 25px;
+      }
+
+      h2 {
+        text-align: center;
+        padding: 5px;
+        background-color: #f2f2f2;
+        margin-top: 75px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kasir Sederhana</h1>
+    <form id="formKasir">
+      <label for="kodeProduk">Kode Produk:</label><br />
+      <input type="text" id="kodeProduk" name="kodeProduk" required /><br />
+      <label for="jumlah">Jumlah:</label><br />
+      <input type="number" id="jumlah" name="jumlah" required /><br />
+      <button type="button" id="tambahProduk">Tambah Item</button>
+    </form>
+
+    <table id="tabelKeranjang">
+      <thead>
+        <tr>
+          <th>Produk</th>
+          <th>Jumlah</th>
+          <th>Harga</th>
+          <th>Subtotal</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody id="keranjang"></tbody>
+    </table>
+
+    <div id="struk"></div>
+    <div id="totalBelanja"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
